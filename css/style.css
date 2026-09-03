@@ -12,6 +12,70 @@ body a {
     text-decoration: none;
 }
 
+body.light-mode {
+    background: #f4f7fb;
+    color: #0f172a;
+}
+
+body.light-mode .portfolio-home,
+body.light-mode .skills,
+body.light-mode .about-home {
+    background: #f4f7fb;
+}
+
+body.light-mode .portfolio-intro {
+    background: radial-gradient(circle at top, rgba(125, 211, 252, 0.65), transparent 30%),
+        linear-gradient(180deg, #eaf2ff 0%, #f8fbff 100%);
+}
+
+body.light-mode .portfolio-intro h1,
+body.light-mode .portfolio-intro .lead,
+body.light-mode .about-home h2,
+body.light-mode .about-home p,
+body.light-mode .section-heading h2,
+body.light-mode .skill-card h5,
+body.light-mode .skill-card p,
+body.light-mode .quick-stats strong,
+body.light-mode .quick-stats span {
+    color: #0f172a;
+}
+
+body.light-mode .eyebrow,
+body.light-mode .portfolio-intro h1 span {
+    color: #2563eb;
+}
+
+body.light-mode .profile-card,
+body.light-mode .skill-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(148, 163, 184, 0.18);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+body.light-mode .theme-toggle {
+    background: #e2e8f0;
+    color: #0f172a;
+    border-color: rgba(148, 163, 184, 0.35);
+}
+
+body.light-mode .theme-toggle-icon {
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563eb;
+}
+
+body.light-mode .custom-nav .nav-link {
+    color: rgba(15, 23, 42, 0.8);
+}
+
+body.light-mode .custom-nav .nav-link:hover,
+body.light-mode .custom-nav .nav-link.active {
+    color: #0f172a;
+}
+
+body.light-mode .custom-navbar .navbar-brand {
+    color: #0f172a;
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -84,12 +148,13 @@ body a {
 /* Navbar */
 #navbar {
     padding: 0.9rem 1.5rem;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    box-shadow: none;
     position: sticky;
     top: 0;
     z-index: 1030;
     backdrop-filter: blur(10px);
-    background-color: rgba(33, 37, 41, 0.96) !important;
+    background-color: rgba(8, 12, 20, 0.85) !important;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
 }
 
 .custom-navbar {
@@ -99,19 +164,18 @@ body a {
 }
 
 .custom-navbar .navbar-brand {
-    color: #fff;
-    font-size: 1.7rem;
+    color: #f8fafc;
+    font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-right: 0;
     text-decoration: none;
-    transition: transform 0.25s ease, color 0.25s ease;
+    transition: color 0.25s ease;
 }
 
 .custom-navbar .navbar-brand:hover {
-    color: #cfe3ff;
-    transform: translateY(-1px);
+    color: #7dd3fc;
 }
 
 .custom-navbar .navbar-collapse {
@@ -123,7 +187,7 @@ body a {
 .custom-nav {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -134,32 +198,33 @@ body a {
 }
 
 .custom-nav .nav-link {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
+    color: rgba(226, 232, 240, 0.8);
+    font-size: 0.8rem;
     font-weight: 600;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    padding: 0.6rem 0.8rem;
-    transition: color 0.25s ease, transform 0.25s ease, background-color 0.25s ease;
+    padding: 0.5rem 0.15rem;
+    transition: color 0.25s ease;
     position: relative;
-    border-radius: 999px;
+    border-radius: 0;
+    background: transparent;
 }
 
 .custom-nav .nav-link:hover,
 .custom-nav .nav-link.active {
-    color: #fff;
-    background: rgba(255, 255, 255, 0.08);
-    transform: translateY(-2px);
+    color: #f8fafc;
+    background: transparent;
+    transform: none;
 }
 
 .custom-nav .nav-link::after {
     content: "";
     position: absolute;
-    left: 0.8rem;
-    right: 0.8rem;
-    bottom: 0.2rem;
-    height: 2px;
-    background: #fff;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: #7dd3fc;
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.25s ease;
@@ -168,6 +233,39 @@ body a {
 .custom-nav .nav-link:hover::after,
 .custom-nav .nav-link.active::after {
     transform: scaleX(1);
+}
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-left: 1rem;
+    padding: 0.55rem 1rem;
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.75);
+    color: #f8fafc;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+}
+
+.theme-toggle:hover {
+    background: rgba(30, 41, 59, 0.9);
+    transform: translateY(-1px);
+}
+
+.theme-toggle-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: rgba(125, 211, 252, 0.15);
+    color: #7dd3fc;
 }
 
 .navbar-toggler {
@@ -235,11 +333,16 @@ body a {
     padding: 0.8rem 1.4rem;
     font-weight: 700;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid transparent;
 }
 
 .portfolio-actions .btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(75, 107, 251, 0.18);
+}
+
+.btn {
+    border-radius: 999px !important;
 }
 
 .quick-stats {
