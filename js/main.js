@@ -1,3 +1,28 @@
+const themeToggle = document.getElementById('themeToggle');
+
+if (themeToggle) {
+    const setTheme = (isDark) => {
+        document.body.classList.toggle('light-mode', !isDark);
+        const icon = themeToggle.querySelector('.theme-toggle-icon i');
+        const label = themeToggle.querySelector('.theme-toggle-text');
+
+        if (icon) {
+            icon.className = isDark ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+        }
+
+        if (label) {
+            label.textContent = isDark ? 'Dark' : 'Light';
+        }
+    };
+
+    themeToggle.addEventListener('click', () => {
+        const isDark = !document.body.classList.contains('light-mode');
+        setTheme(!isDark);
+    });
+
+    setTheme(true);
+}
+
 // Smooth scrolling for navigation links with offset for sticky navbar
 const navbarHeight = document.querySelector('#navbar')?.offsetHeight || 70;
 
