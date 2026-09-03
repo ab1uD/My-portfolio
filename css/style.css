@@ -3,7 +3,13 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #e5edf7;
+    background: #070b14;
+    min-height: 100vh;
+}
+
+body a {
+    text-decoration: none;
 }
 
 /* Hero Section */
@@ -185,9 +191,11 @@ body {
 }
 
 .portfolio-intro {
-    background: linear-gradient(180deg, #f8fafc 0%, #eef4ff 100%);
+    background: radial-gradient(circle at top, rgba(77, 124, 255, 0.28), transparent 35%),
+        linear-gradient(180deg, #0b1220 0%, #0d1728 100%);
     padding-top: 5rem;
     padding-bottom: 4rem;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
 }
 
 .eyebrow {
@@ -195,7 +203,7 @@ body {
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #4b6bfb;
+    color: #7dd3fc;
     margin-bottom: 1rem;
 }
 
@@ -204,17 +212,17 @@ body {
     font-weight: 800;
     line-height: 1.05;
     margin-bottom: 1rem;
-    color: #162033;
+    color: #f8fafc;
 }
 
 .portfolio-intro h1 span {
-    color: #4b6bfb;
+    color: #7dd3fc;
 }
 
 .portfolio-intro .lead {
     max-width: 620px;
     font-size: 1.12rem;
-    color: #53627a;
+    color: #cbd5e1;
     margin-bottom: 2rem;
 }
 
@@ -248,20 +256,20 @@ body {
     flex-direction: column;
     min-width: 90px;
     padding: 0.8rem 1rem;
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(22, 32, 51, 0.05);
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(148, 163, 184, 0.16);
     border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
 }
 
 .quick-stats strong {
     font-size: 1.3rem;
-    color: #162033;
+    color: #f8fafc;
 }
 
 .quick-stats span {
     font-size: 0.75rem;
-    color: #5b6b82;
+    color: #a5b4cf;
     letter-spacing: 0.04em;
     text-transform: uppercase;
 }
@@ -271,10 +279,10 @@ body {
     max-width: 420px;
     margin: 0 auto;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(22, 32, 51, 0.06);
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7));
+    border: 1px solid rgba(148, 163, 184, 0.18);
     border-radius: 30px;
-    box-shadow: 0 25px 50px rgba(15, 23, 42, 0.08);
+    box-shadow: 0 25px 50px rgba(2, 6, 23, 0.5);
 }
 
 .profile-card img {
@@ -284,7 +292,7 @@ body {
     object-position: center top;
     border-radius: 24px;
     display: block;
-    background: #edf2ff;
+    background: #0f172a;
 }
 
 .profile-badge {
@@ -292,7 +300,7 @@ body {
     right: 1.5rem;
     bottom: 1.5rem;
     background: rgba(34, 197, 94, 0.16);
-    color: #166534;
+    color: #bbf7d0;
     font-weight: 700;
     border: 1px solid rgba(34, 197, 94, 0.25);
     padding: 0.6rem 1rem;
@@ -302,48 +310,48 @@ body {
 
 .section-heading h2 {
     font-size: clamp(2rem, 3vw, 2.8rem);
-    color: #162033;
+    color: #f8fafc;
     font-weight: 800;
     margin-bottom: 0;
 }
 
 .skill-card {
     padding: 2rem 1.25rem;
-    background: #fff;
-    border: 1px solid rgba(22, 32, 51, 0.04);
+    background: linear-gradient(180deg, #111827 0%, #0f172a 100%);
+    border: 1px solid rgba(148, 163, 184, 0.14);
     border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+    box-shadow: 0 10px 25px rgba(2, 6, 23, 0.26);
     height: 100%;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .skill-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 30px rgba(15, 23, 42, 0.08);
+    box-shadow: 0 16px 30px rgba(2, 6, 23, 0.35);
 }
 
 .skill-card h5 {
     font-weight: 700;
     margin-bottom: 0.75rem;
-    color: #162033;
+    color: #f8fafc;
 }
 
 .skill-card p {
     margin-bottom: 0;
-    color: #5b6b82;
+    color: #cbd5e1;
 }
 
 .about-home {
-    background: #ffffff;
+    background: #0b1220;
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
 
 .about-image-wrap {
-    background: linear-gradient(135deg, #eef4ff 0%, #f5f7fb 100%);
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.12), rgba(15, 23, 42, 0.9));
     border-radius: 28px;
     padding: 1rem;
-    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+    box-shadow: 0 20px 40px rgba(2, 6, 23, 0.35);
 }
 
 .about-image-wrap img {
@@ -357,12 +365,12 @@ body {
 .about-home h2 {
     font-size: clamp(2rem, 3vw, 3rem);
     font-weight: 800;
-    color: #162033;
+    color: #f8fafc;
     margin-bottom: 1rem;
 }
 
 .about-home p {
-    color: #53627a;
+    color: #cbd5e1;
     font-size: 1.05rem;
     line-height: 1.8;
 }
@@ -376,6 +384,19 @@ body {
 /* Footer */
 footer {
     margin-top: auto;
+    background: #050b14 !important;
+    color: #cbd5e1;
+    border-top: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+footer p {
+    color: #cbd5e1;
+}
+
+.skills {
+    background: #0b1220 !important;
+    border-top: 1px solid rgba(148, 163, 184, 0.12);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
 }
 
 /* Responsive Design */
